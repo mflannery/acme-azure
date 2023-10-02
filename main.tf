@@ -1,5 +1,12 @@
 # Configure the Azure provider
 terraform {
+  cloud {
+    organization = "mikedemo1"
+
+    workspaces {
+      name = "Acme-azure"
+    }
+  }
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
@@ -15,6 +22,6 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = "myTFResourceGroup"
+  name     = "AcmeResourceGroup"
   location = "eastus2"
 }
