@@ -23,5 +23,5 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "rg" {
   name     = "AcmeResourceGroup"
-  location = var.location
+  location = "eastus2"
 }
